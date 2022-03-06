@@ -1,6 +1,6 @@
 # gnome-contacts vCard Importer
 
-Imports version 2.1 vCards into the Gnome-Contacts contact database. I made this in order to import the contacts from my old phone so there could be some cases not handled (such as NICKNAME which came in vCard 3.0).
+Imports version 2.1 vCards into the Gnome-Contacts contact database. I made this in order to import the contacts from my old phone so there could be some cases not handled (such as NICKNAME which came in vCard 3.0). I did confirm that it properly imports the PHOTO property when the photo is an embeded BASE64 encoded JPEG image.
 
 # Running
 
