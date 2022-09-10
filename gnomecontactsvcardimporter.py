@@ -18,7 +18,7 @@ def handle_vcard(vcard_lines, endTagFound=True):
     vcard_raw = '\n'.join(vcard_lines)
     
     # Use vobject to read the card data
-    vcard = vobject.readOne(vcard_raw)
+    vcard = vobject.readOne(vcard_raw, allowQP=True)
     
     ### Figure out information needed for DB columns
     
