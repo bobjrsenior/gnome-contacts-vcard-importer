@@ -126,7 +126,7 @@ if __name__ == '__main__':
         print('The contacts.db filepath and vcard filepath are required parameters')
     else:
         # Open the VCard file
-        with(open(vcard_path, 'r', encoding='utf-8') as vcard_file):
+        with open(vcard_path, 'r', encoding='utf-8') as vcard_file:
             cur_vcard_lines = []
             in_vcard = False
             # Iterate through it
