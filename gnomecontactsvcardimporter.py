@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
-import datetime
+from datetime import datetime, UTC
 import io
 import random
 import sqlite3
@@ -109,7 +109,7 @@ def insert_db_main(uid, file_as, nickname, full_name, given_name, family_name, v
     db_cursor = db_con.cursor()
 
     # Get a timestamp for the Rev column
-    rev_date_time = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    rev_date_time = datetime.now(UTC).strftime('%Y-%m-%dT%H:%M:%SZ')
 
     # Insert the contact data
     db_cursor.execute('insert into folder_id (uid, Rev, file_as, nickname, full_name, given_name, family_name, vcard, is_list, list_show_addresses, wants_html, x509Cert, pgpCert) values (?, ?, ?, ?, ?, ?, ?, ?, 0, 0, 0, 0, 0)', (uid, rev_date_time, file_as, nickname, full_name, given_name, family_name, vcard))
